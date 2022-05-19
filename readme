@@ -1,0 +1,18 @@
+This program was written using the IDE "PyCharm".
+Only one additional package is needed for the program to function, "vacuumSetUp.py" imports the sqrt function from math
+
+This is an implementation of the A* pathing finding algorithm using a patrolling vacuum bot. The set up is simple, a 5x5 grid is
+created and a number of rooms are labeled as dirty. The bot scans which rooms are dirty and find the path with the smallest
+number of acy=tions to clean all the rooms
+
+Actions as defined by the bot are moving up, down, left, or right and cleaning a room. 
+
+After the optimal path is found, the bot prints the path to the user console as well as the total number of actions 
+
+The first, and more optimal heuristic is calculated by (distance to closest dirty room + total movement cost so far).
+
+The second, and far less optimal heuristic is calculated by (distance to farthest dirty room + total movement cost so far).
+
+To switch between Heuristics, in the file "vaccumSetUp.py" find the __inti__ and Suck functions for the "Vacuuum" class
+Swap the commented lines in each function that set the value of "self.closestDirtyRoom". Approximately lines 34,35 and 63,64.
+On turn in the program is set to use the first heuristic.
